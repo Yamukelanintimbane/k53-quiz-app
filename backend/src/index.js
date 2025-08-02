@@ -16,7 +16,7 @@ mongoose.set('strictQuery', true);
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'development' ? 'http://localhost:5173' : 'https://k53-quiz-app.netlify.app',
+  origin: process.env.NODE_ENV === 'production' ? 'http://localhost:5173' : 'https://k53-quiz-app.netlify.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization']
